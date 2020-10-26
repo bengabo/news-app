@@ -1,10 +1,9 @@
-<ion-header [translucent]="true">
-  <ion-toolbar color="primary">
-    <ion-title class="staatliches">
+<ion-header [translucent]="false">
+  <ion-toolbar>
+    <ion-title class="staatliches titlePage">
       News Room
     </ion-title>
-
-    
+    <!-- <img src="../../assets/countrys-flags/france.png" class="flag"/> -->
   </ion-toolbar>
 </ion-header>
 
@@ -15,11 +14,20 @@
         <ion-icon name="earth-outline"></ion-icon>
     </ion-fab-button>
     <ion-fab-list side="end">
-      <ion-fab-button color="light">
-        <p>FR</p>
+      <ion-fab-button color="dark" (click)="loadNewsFr()">
+        <img src="../../assets/countrys-flags/france.png"/>
       </ion-fab-button>
-      <ion-fab-button color="light">
-        <p>US</p>
+      <ion-fab-button color="dark" (click)="loadNewsDe()">
+        <img src="../../assets/countrys-flags/germany.png"/>
+      </ion-fab-button>
+      <ion-fab-button color="dark" (click)="loadNewsUs()">
+        <img src="../../assets/countrys-flags/usa.png"/>
+      </ion-fab-button>
+      <ion-fab-button color="dark" (click)="loadNewsRu()">
+        <img src="../../assets/countrys-flags/russia.png"/>
+      </ion-fab-button>
+      <ion-fab-button color="dark" (click)="loadNewsJp()">
+        <img src="../../assets/countrys-flags/japan.png"/>
       </ion-fab-button>
     </ion-fab-list>
   </ion-fab>
@@ -27,12 +35,11 @@
   <ion-card *ngFor="let article of articles">
     <ion-img src={{article.urlToImage}}></ion-img>
     <ion-card-header>
-      <ion-card-subtitle>{{ article.publishedAt | date }}</ion-card-subtitle>
-      <ion-card-title color="primary">{{ article.title }}</ion-card-title>
+      <ion-card-subtitle><span class="highlight">{{ article.publishedAt | date }}</span></ion-card-subtitle>
+      <ion-card-title class="title">{{ article.title }}</ion-card-title>
     </ion-card-header>
-
-    <ion-card-content>{{ article.description }}</ion-card-content>
-    <ion-card-content><a href="{{article.url}}" target="_blank">lien vers l'article</a> </ion-card-content>
+    <ion-card-content class="article-content">{{ article.description }}
+    <br/><a href="{{article.url}}" target="_blank">lien vers l'article</a></ion-card-content>
   </ion-card>
 
 </ion-content>

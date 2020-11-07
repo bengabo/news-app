@@ -22,7 +22,7 @@ export class HomePage implements OnInit {
   loadNewsFr(){
     this.newsService.getNews("top-headlines?country=fr").subscribe(news => {
       this.articles = news["articles"];
-      console.log(this.articles);
+      // console.log(this.articles);
     })
   }
   

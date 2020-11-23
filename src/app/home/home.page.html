@@ -1,9 +1,8 @@
-<ion-header [translucent]="true">
-  <ion-toolbar class="toolbar-background" lines="none">
-    <ion-title class=" titlePage">
+<ion-header [translucent]="false">
+  <ion-toolbar>
+    <ion-title class="titlePage coustard" routerLink="/logo-page">
       News Room
     </ion-title>
-    <!-- <img src="../../assets/countrys-flags/france.png" class="flag"/> -->
   </ion-toolbar>
 </ion-header>
 
@@ -11,7 +10,7 @@
   
   <ion-fab horizontal="start" vertical="top" slot="fixed">
     <ion-fab-button color="primary">
-        <ion-icon name="earth-outline"></ion-icon>
+        <ion-icon name="earth-outline" size="large"></ion-icon>
     </ion-fab-button>
     <ion-fab-list side="end">
       <ion-fab-button color="dark" (click)="loadNewsFr()">

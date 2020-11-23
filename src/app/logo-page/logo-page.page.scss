@@ -1,0 +1,28 @@
+.staatliches {
+  font-family: 'Staatliches', cursive;
+  font-weight: 900;  
+}
+
+.coustard {
+  font-family: 'Coustard', serif;
+  font-weight: 900; 
+  
+}
+
+
+ion-content {
+  display: flex;
+  --background: url('../../assets/images/logo-page_BG.jpg') center/cover fixed;
+  --background-repeat: no-repeat;
+}
+
+ion-title { 
+  font-size: 2.5rem;
+}
+
+.title {
+  // justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}

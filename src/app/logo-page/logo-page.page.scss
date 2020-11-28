@@ -12,7 +12,7 @@
 
 ion-content {
   display: flex;
-  --background: url('../../assets/images/logo-page_BG.jpg') center/cover fixed;
+  --background: url('../../assets/images/logo-page_BG04.jpg') center/cover fixed;
   --background-repeat: no-repeat;
 }
 
@@ -22,7 +22,14 @@ ion-title {
 
 .title {
   // justify-content: center;
+  position: absolute;
   align-items: center;
   text-align: center;
-
+  z-index : 2 ;
+  --color :white;
+  --box-shadow : 5px 0px 0px #ff26be , -5px 0px 0px #ffa125 ;
+  --padding-start : 0px ;
+  --padding-end : 0px ;
+  --padding-top : 0px ;
+  --padding-bottom : 0px ;
 }

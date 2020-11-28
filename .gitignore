@@ -29,6 +29,4 @@ npm-debug.log*
 /platforms
 /plugins
 /www
-/logo-page_BGv01.psd
-/logo-page_BGv02.psd
-/logo-page_BGv03.psd
+*.psd

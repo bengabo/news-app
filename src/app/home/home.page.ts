@@ -26,12 +26,20 @@ export class HomePage implements OnInit {
     })
   }
   
+  loadNewsUk(){
+    this.newsService.getNews("top-headlines?country=gb").subscribe(news=>{
+      this.articles = news["articles"];
+    })
+    
+  }
+  
   loadNewsDe(){
     this.newsService.getNews("top-headlines?country=de").subscribe(news=>{
       this.articles = news["articles"];
     })
     
   }
+
 
   loadNewsUs(){
     this.newsService.getNews("top-headlines?country=us").subscribe(news=>{

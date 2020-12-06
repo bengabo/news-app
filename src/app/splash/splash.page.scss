@@ -3,12 +3,44 @@ ion-content {
   --background-repeat: no-repeat;
 }
 
-@-webkit-keyframes puff-in-center{0%{-webkit-transform:scale(2);transform:scale(2);-webkit-filter:blur(4px);filter:blur(4px);opacity:0}100%{-webkit-transform:scale(1);transform:scale(1);-webkit-filter:blur(0);filter:blur(0);opacity:1}}@keyframes puff-in-center{0%{-webkit-transform:scale(2);transform:scale(2);-webkit-filter:blur(4px);filter:blur(4px);opacity:0}100%{-webkit-transform:scale(1);transform:scale(1);-webkit-filter:blur(0);filter:blur(0);opacity:1}}
+@-webkit-keyframes puff-in-center{0%{
+  -webkit-transform:scale(2);
+  transform:scale(2);
+  -webkit-filter:blur(2px);
+  filter:blur(2px);
+  opacity:0
+} 100% {
+  -webkit-transform:scale(1);
+  transform:scale(1);
+  -webkit-filter:blur(0);
+  filter:blur(0);
+  opacity:1 }
+}
+@keyframes puff-in-center{0%{
+  -webkit-transform:scale(2);
+  transform:scale(2);
+  -webkit-filter:blur(2px);
+  filter:blur(2px);
+  opacity:0
+} 100% {
+  -webkit-transform:scale(1);
+  transform:scale(1);
+  -webkit-filter:blur(0);
+  filter:blur(0);
+  opacity:1 }
+}
 
 .container {
-  -webkit-animation:puff-in-center .7s cubic-bezier(.25,.46,.45,.94) .5s both;animation:puff-in-center .7s cubic-bezier(.25,.46,.45,.94) .5s both;
+  -webkit-animation:puff-in-center .5s cubic-bezier(.25,.46,.45,.94) .5s both;
+  animation:puff-in-center .5s cubic-bezier(.25,.46,.45,.94) .5s both;
+  height: 100%;
   img {
-    height: 250px;
-    margin-top: 55%;
+    display: block;
+    margin: auto;
+    height: 100%;
   }
+}
+
+.splashLogo {
+  transform: scale(1);
 }

@@ -31,8 +31,8 @@ ion-content {
 }
 
 .container {
-  -webkit-animation:puff-in-center .5s cubic-bezier(.25,.46,.45,.94) .5s both;
-  animation:puff-in-center .5s cubic-bezier(.25,.46,.45,.94) .5s both;
+  -webkit-animation:puff-in-center .5s cubic-bezier(.25,.46,.45,.94) 1s both;
+  animation:puff-in-center .5s cubic-bezier(.25,.46,.45,.94) 1s both;
   height: 100%;
   img {
     display: block;

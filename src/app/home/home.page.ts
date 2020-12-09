@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NewsFeedsService } from '../news-feeds.service';
-import { IonContent, Platform } from '@ionic/angular';
+import { IonContent } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -9,9 +9,6 @@ import { IonContent, Platform } from '@ionic/angular';
 })
 export class HomePage implements OnInit {
   articles: any;
-  // chooseLanguage: boolean = true;
-  // chooseFr: boolean = false;
-  // chooseUs: boolean = false;
 
   constructor(private newsService: NewsFeedsService) {
     this.loadNewsFr();
@@ -30,7 +27,6 @@ export class HomePage implements OnInit {
     this.newsService.getNews("top-headlines?country=fr").subscribe(news => {
       this.articles = news["articles"];
       this.gotToTop();
-      // console.log(this.articles);
     })
   }
   

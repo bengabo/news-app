@@ -25,6 +25,21 @@ ion-title  {
   
 }
 
+.top_button {
+  --border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  border: none;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  text-align: right;
+}
+
+.top_icon{
+  min-height: 5rem;
+}
+
 ion-fab {
   border-radius: none;
 }

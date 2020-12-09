@@ -6,8 +6,15 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true"
+  [scrollEvents]="true"
+  (ionScroll)="getScrollPos($event.detail.scrollTop)"
+>
   
+  <ion-button (click)="gotToTop()" class="top_button" slot="fixed">
+    <ion-icon class="top_icon" name="caret-up-outline" size="large"></ion-icon>
+  </ion-button>
+
   <ion-fab horizontal="start" vertical="top" slot="fixed">
     <ion-fab-button color="primary">
         <ion-icon name="earth-outline" size="large"></ion-icon>
@@ -33,6 +40,7 @@
       </ion-fab-button>
     </ion-fab-list>
   </ion-fab>
+
 
   <ion-card *ngFor="let article of articles">
     <ion-img src={{article.urlToImage}}></ion-img>

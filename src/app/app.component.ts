@@ -19,27 +19,27 @@ export class AppComponent {
 
     var anim1 = this.animationCtrl.create()
       .addElement(opts.leavingEl)
-      .duration(2500)
+      .duration(1000)
       .iterations(1)
       .easing('ease-out')
       .fromTo('opacity', '1', '0.0')
 
     var anim2 = this.animationCtrl.create()
       .addElement(opts.enteringEl)
-      .duration(2500)
+      .duration(2000)
       .iterations(1)
       .easing('ease-out')
       .fromTo('opacity', '0.0', '1')
 
       var transition = this.animationCtrl.create()
       .addElement(opts.enteringEl)
-      .duration(2500)
+      .duration(3000)
       .iterations(1)
       .addAnimation([anim1, anim2])
 
     return transition
   });
-
+ 
   // myCustomPageTransition = ((baseEl: any, opts?: any) => {
   //   console.log("opts.enteringEl" + opts.enteringEl);
   //   console.log("opts.leavingEl" + opts.leavingEl);

@@ -12,17 +12,10 @@ ion-toolbar {
   // min-width: 390px;
 }
 
-
 ion-title  {
   font-size: 1.5rem;
 }
 
-.flag{
-  position: relative;
-  margin-left: 15px;
-  width: 25px;
-  height: 25px;
-}
 
 .titlePage {
   // text-align: center;
@@ -32,10 +25,23 @@ ion-title  {
   
 }
 
+ion-fab {
+  border-radius: none;
+}
+
+.flag{
+  --border-style: none;
+  position: relative;
+  margin-left: 15px;
+  width: 25px;
+  height: 25px;
+}
+
 .title {
   color: #333333;
   font-size: 24px;
 }
+
 
 .highlight {
   background-color: #ffde26;

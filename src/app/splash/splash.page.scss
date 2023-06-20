@@ -1,0 +1,59 @@
+ion-content {
+  --background: url('../../assets/images/logo-page_BG04.jpg') center/cover fixed;
+  --background-repeat: no-repeat;
+}
+
+// @-webkit-keyframes puff-in-center{0%{
+//   -webkit-transform:scale(2);
+//   transform:scale(2);
+//   -webkit-filter:blur(2px);
+//   filter:blur(2px);
+//   opacity:0
+// } 100% {
+//   -webkit-transform:scale(1);
+//   transform:scale(1);
+//   -webkit-filter:blur(0);
+//   filter:blur(0);
+//   opacity:1 }
+// }
+// @keyframes puff-in-center{0%{
+//   -webkit-transform:scale(2);
+//   transform:scale(2);
+//   -webkit-filter:blur(2px);
+//   filter:blur(2px);
+//   opacity:0
+// } 100% {
+//   -webkit-transform:scale(1);
+//   transform:scale(1);
+//   -webkit-filter:blur(0);
+//   filter:blur(0);
+//   opacity:1 }
+// }
+
+.container {
+  // -webkit-animation:puff-in-center .5s cubic-bezier(.25,.46,.45,.94) 1s both;
+  // animation:puff-in-center .5s cubic-bezier(.25,.46,.45,.94) 1s both;
+  height: 100%;
+  display: flex;
+  img {
+    display: block;
+    margin: auto;
+    height: 100%;
+  }
+
+  lottie-player {
+    // display: block;
+    margin: auto;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    // position: absolute;
+    // top:50%;
+    // bottom:50%;
+    // transform:translate(-50%, -50%);
+  }
+}
+
+.splashLogo {
+  transform: scale(0.9);
+}

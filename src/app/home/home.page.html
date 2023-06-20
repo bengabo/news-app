@@ -1,13 +1,20 @@
-<ion-header [translucent]="false">
+<ion-header [translucent]="false" class="ion-no-border">
   <ion-toolbar>
-    <ion-title class="titlePage coustard" routerLink="/logo-page">
-      News Room
+    <ion-title class="titlePage coustard">
+      NewsRoom
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true"
+  [scrollEvents]="true"
+  (ionScroll)="getScrollPos($event.detail.scrollTop)"
+>
   
+  <ion-button (click)="gotToTop()" class="top_button" slot="fixed">
+    <ion-icon class="top_icon" name="caret-up-outline" size="large"></ion-icon>
+  </ion-button>
+
   <ion-fab horizontal="start" vertical="top" slot="fixed">
     <ion-fab-button color="primary">
         <ion-icon name="earth-outline" size="large"></ion-icon>
@@ -15,6 +22,9 @@
     <ion-fab-list side="end">
       <ion-fab-button color="dark" (click)="loadNewsFr()">
         <img src="../../assets/countrys-flags/france.png"/>
+      </ion-fab-button>
+      <ion-fab-button color="dark" (click)="loadNewsUk()">
+        <img src="../../assets/countrys-flags/united-kingdom.png"/>
       </ion-fab-button>
       <ion-fab-button color="dark" (click)="loadNewsDe()">
         <img src="../../assets/countrys-flags/germany.png"/>
@@ -30,6 +40,7 @@
       </ion-fab-button>
     </ion-fab-list>
   </ion-fab>
+
 
   <ion-card *ngFor="let article of articles">
     <ion-img src={{article.urlToImage}}></ion-img>
